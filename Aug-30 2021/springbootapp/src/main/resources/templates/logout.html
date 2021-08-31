@@ -5,9 +5,11 @@
 <title>Home</title>
 </head>
 <body>
-	<h2>Welcome to Spring Boot</h2>
+	<h2>Logout</h2>
 	<p>This is a  Spring Boot Application</p>
 	
-	<a th:href="@{/logoff}">Logout</a>
+	<form th:action="@{/logout}" method="post">
+		<button type="submit">Sign Off</button>
+	</form>
 </body>
 </html>

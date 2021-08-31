@@ -7,5 +7,23 @@
 <body>
 	<h2>Login</h2>
 	<p>This is a  Spring Boot Application</p>
+	
+	<h4 th:if="${param.error}">
+		Bad Credentials.
+	</h4>
+	
+	<h4 th:if="${param.logout}">
+		You got logged out!
+	</h4>
+	
+	<form th:action="@{/login}" method="post">
+		<p>UserName</p>
+		<input name="username"> 
+		<p>Password</p>
+		<input type="password" name="password">
+		<div>
+			<button type="submit">SignIn</button>
+		</div>
+	</form>
 </body>
 </html>
